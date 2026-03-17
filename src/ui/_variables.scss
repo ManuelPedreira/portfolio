@@ -1,0 +1,52 @@
+@use "sass:map";
+
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+);
+
+$lightColors: (
+  background: #ffffff,
+  foreground: #171717,
+
+  error: #9c0000,
+);
+
+$darkColors: (
+  background: #171717,
+  foreground: #ffffff,
+
+  error: #9c0000,
+);
+
+@mixin generate-theme($colors) {
+  --background: #{map.get($colors, background)};
+  --foreground: #{map.get($colors, foreground)};
+  --error: #{map.get($colors, error)};
+}
+
+:root {
+  @include generate-theme($lightColors);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include generate-theme($darkColors);
+  }
+}
+
+@function color($name) {
+  @return var(--#{$name});
+}
+
+$sizes: (
+  percentage-width: 80%,
+  max-width: 1200px,
+  navbar-height: 70px,
+  footer-height: 50px,
+);
+
+@function size($size-name) {
+  @return map.get($sizes, $size-name);
+}
