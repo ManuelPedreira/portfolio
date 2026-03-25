@@ -1,0 +1,20 @@
+{
+  "RootLayout": {
+    "title": "Manuel.Pedreira.dev",
+    "description": "Manuel Pedreira | Desarrollador "
+  },
+  "Info": {
+    "name": "Manuel.Pedreira.dev ingles",
+    "developer": "Desarrolador Full Stack",
+    "description": "texto largo",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "resume": "Curriculum",
+      "contact": "Contacto"
+    }
+  },
+  "Experience": {
+    "title": "Experiencia"
+  }
+}
